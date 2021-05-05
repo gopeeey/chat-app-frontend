@@ -1,6 +1,6 @@
 import {io} from 'socket.io-client';
 
-const URL = 'https://fierce-castle-22690.herokuapp.com/';
+const URL = 'https://garnet-silken-stage.glitch.me';
 const socket = io(URL, {autoConnect: false});
 
 socket.onAny((event, ...args) => {
