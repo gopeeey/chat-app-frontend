@@ -341,7 +341,7 @@ startListeners = () => {
          newState["users"] = newUsers;
        }
      }
-     this.changeState(newState);
+     this.changeState(newState, this.scrollChatBox);
       }
      
   });
@@ -455,14 +455,16 @@ handleMessageSubmit = (e) => {
       tempMessages,
       users: newUserList,
       activeUser: user
-    }, () => {
-      if (document) {
-      const chatArea = document.getElementById('chatArea');
-      chatArea.scrollTop = chatArea.scrollHeight;
-    }
-    });
+    }, this.scrollChatBox);
     
   }
+}
+
+scrollChatBox = () => {
+  if (document) {
+  const chatArea = document.getElementById('chatArea');
+  chatArea.scrollTop = chatArea.scrollHeight;
+}
 }
 
 logout = () => {
