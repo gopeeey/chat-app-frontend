@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '../src/theme';
+import Container from '../layout/container';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+export default function App({ Component, pageProps }) {
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
+    </ThemeProvider>
+  )
 }
-
-export default MyApp
