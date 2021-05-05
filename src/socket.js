@@ -1,6 +1,6 @@
 import {io} from 'socket.io-client';
 
-const URL = 'http://localhost:3030';
+const URL = 'https://fierce-castle-22690.herokuapp.com/';
 const socket = io(URL, {autoConnect: false});
 
 socket.onAny((event, ...args) => {
