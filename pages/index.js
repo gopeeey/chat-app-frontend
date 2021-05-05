@@ -388,7 +388,7 @@ setActiveUser = (user) => {
     activeUser: newUser,
     users: newUsers,
     asideOpen: false
-  });
+  }, this.scrollChatBox);
 }
 
 
